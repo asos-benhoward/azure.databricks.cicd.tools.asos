@@ -3,7 +3,7 @@ param(
 )
 
 Set-Location $PSScriptRoot
-Import-Module "..\azure.databricks.cicd.tools.psd1" -Force
+Import-Module "..\azure.databricks.cicd.tools.asos.psd1" -Force
 $Config = (Get-Content '.\config.json' | ConvertFrom-Json)
 $libraryFile = 'Samples\DummyLibraries\dummylibraries.json'
 $libraries = (Get-Content -path $libraryFile -Raw) -replace '__cluster_id__', $Config.AddLibraryClusterId | ConvertFrom-Json

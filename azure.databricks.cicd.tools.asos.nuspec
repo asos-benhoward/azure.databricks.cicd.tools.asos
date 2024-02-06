@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+<metadata>
+<id>azure.databricks.cicd.tools.asos</id>
+<version>0.0.3</version>
+<authors>Ben Howard</authors>
+<description>Forked version of azure.databricks.cicd.tools</description>
+</metadata>
+<files>
+	<file src="azure.databricks.cicd.tools.asos.psd1"/>
+	<file src="azure.databricks.cicd.tools.asos.psm1"/>
+	<file src="Private\**" target="Private"/>
+	<file src="Public\**" target="Public"/>
+</files>
+</package>

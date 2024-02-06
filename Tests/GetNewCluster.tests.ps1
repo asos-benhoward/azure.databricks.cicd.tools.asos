@@ -1,5 +1,5 @@
 Set-Location $PSScriptRoot
-Import-Module "..\azure.databricks.cicd.tools.psm1" -Force
+Import-Module "..\azure.databricks.cicd.tools.asos.psm1" -Force
 Describe "GetNewCluster" {
         It "Multi Value Settings"{
                 $SparkVersion="5.5.x-scala2.11"

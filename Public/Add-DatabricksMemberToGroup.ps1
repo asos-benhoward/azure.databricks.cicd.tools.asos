@@ -55,7 +55,7 @@ Function Add-DatabricksMemberToGroup
             $body = '{"user_name": "' + $Member + '", "parent_name": "' + $Parent + '"   }'
         }
 
-        Invoke-RestMethod -Method Post -Body $body -Uri "$global:DatabricksURI/api/2.0/groups/add-member" -Headers $Headers -OutFile $OutFile
+        Invoke-RestMethod -Method Post -Body $body -Uri "$global:DatabricksURI/api/2.0/groups/add-member" -Headers $Headers
         Write-Verbose "User $Member added to $Parent group"
     }
     Catch {

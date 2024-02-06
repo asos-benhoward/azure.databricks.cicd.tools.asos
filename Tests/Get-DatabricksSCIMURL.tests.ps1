@@ -1,5 +1,5 @@
 Set-Location $PSScriptRoot
-Import-Module "..\azure.databricks.cicd.tools.psd1" -Force
+Import-Module "..\azure.databricks.cicd.tools.asos.psd1" -Force
 
 $uriTest = "/api/2.0/preview/scim/v2"
 
