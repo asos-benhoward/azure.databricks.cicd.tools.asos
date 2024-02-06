@@ -168,6 +168,9 @@ Function Connect-Databricks {
         }
     }
     $global:DatabricksURI = "https://$AzureRegion.$AzureDatabricksURISuffix"
+
+    $global:Headers['Content-Type'] = "application/json"
+
     Write-Verbose "Globals at end of Connect:" 
     Write-Globals
     if ($PSBoundParameters.ContainsKey('TestConnectDatabricks')) {
