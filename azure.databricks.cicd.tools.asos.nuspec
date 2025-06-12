@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
 <metadata>
 <id>azure.databricks.cicd.tools.asos</id>
-<version>1.0.1</version>
+<version>1.0.2</version>
 <authors>Ben Howard</authors>
 <description>Forked version of azure.databricks.cicd.tools</description>
 </metadata>
