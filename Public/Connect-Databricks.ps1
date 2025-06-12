@@ -144,8 +144,8 @@ Function Connect-Databricks {
         $global:Headers = @{"Authorization" = "$global:DatabricksAccessToken" }
     }
     elseif ($PSCmdlet.ParameterSetName -eq "AzContext") {
-        $ADResponseToken = Get-AzAccessToken -ResourceUrl "2ff814a6-3304-4ab8-85cb-cd0e6f879c1d"
-        $global:DatabricksAccessToken = $ADResponseToken.Token
+        $ADResponseToken = Get-AzAccessToken -ResourceUrl "2ff814a6-3304-4ab8-85cb-cd0e6f879c1d" -AsSecureString
+        $global:DatabricksAccessToken = $ADResponseToken.Token  | ConvertFrom-SecureString -AsPlainText
         $global:DatabricksTokenExpires = ($ADResponseToken.ExpiresOn).LocalDateTime
         $global:Headers = @{"Authorization" = "Bearer $DatabricksAccessToken";
             "X-Databricks-Org-Id"           = "$DatabricksOrgId"
